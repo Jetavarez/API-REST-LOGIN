@@ -17,7 +17,7 @@ def write_token(data: dict):
     return token.encode ("UTF-8")
 
 
-def valida_token(token, output=False):
+def validate_token(token, output=False):
         try:
             if output:
                 return decode(token, key=getenv("SECRET"), algorithms= ["HS256"])
